@@ -1,0 +1,181 @@
+Name: Screens
+Type: ScreensCategoryFolder
+Children:
+- Name: Charts
+  Id: g=1d3b6de26b735644117473fff7ede35d
+  Supertype: Screen
+  ReferenceType: HasComponent
+  Children:
+  - Name: ChartBrowser
+    Type: WebBrowser
+    Children:
+    - Name: URL
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "http://localhost:3000/d/de91ee20-b074-4af3-a6c3-a8bbcb3bc856/sine-and-cosine-data?orgId=1&from=now-15m&to=now&timezone=browser&refresh=auto&kiosk"
+    - Class: Reference
+      Target: ns=3;i=354
+      Direction: Forward
+    - Class: Reference
+      Target: ns=3;i=356
+      Direction: Forward
+    - Class: Reference
+      Target: ns=3;i=358
+      Direction: Forward
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1500.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 780.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: ScrollBarStyle
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "Default"
+    - Name: IncognitoMode
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+  - Name: HorizontalAlignment
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 3
+- Name: DataList
+  Id: g=07bb14f0217b0d27cf3faf9a5b3e57c3
+  Supertype: Screen
+  ReferenceType: HasComponent
+  Children:
+  - Name: TableBrowser
+    Type: WebBrowser
+    Children:
+    - Name: URL
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "http://localhost:3000/d/7d4fb954-b9a3-486e-8eab-491c629043ca/table-data?orgId=1&from=now-15m&to=now&timezone=browser&refresh=auto&kiosk"
+    - Class: Reference
+      Target: ns=3;i=354
+      Direction: Forward
+    - Class: Reference
+      Target: ns=3;i=356
+      Direction: Forward
+    - Class: Reference
+      Target: ns=3;i=358
+      Direction: Forward
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: IncognitoMode
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+- Name: SystemSettings
+  Id: g=a732f09a9a64b7f6a6bf6edfb7132966
+  Supertype: Screen
+  ReferenceType: HasComponent
+  Children:
+  - Name: Rectangle1
+    Type: Rectangle
+    Children:
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 640.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 510.0
+    - Name: Checkbox1
+      Type: CheckBox
+      Children:
+      - Name: Checked
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/PostgresqlTest/Model/SystemSettings/FilterbuyBranding"
+          Children:
+          - Name: Mode
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: Optional
+        Value: {"LocaleId":"en-US","Text":"Filterbuy Branding"}
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 40.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 23.0
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 24.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: FillColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#ffffff37"

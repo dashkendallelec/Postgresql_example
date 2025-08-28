@@ -1,0 +1,33 @@
+﻿
+			<svg width="800" height="200" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<rect width="800" height="200" fill="url(#gradient-fill)"/>
+				<defs>
+					<linearGradient id="gradient-fill" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+						
+							<stop offset="0" stop-color="#008432" />
+						
+							<stop offset="0.09090909090909091" stop-color="#008432" />
+						
+							<stop offset="0.18181818181818182" stop-color="#008535" />
+						
+							<stop offset="0.2727272727272727" stop-color="#00873c" />
+						
+							<stop offset="0.36363636363636365" stop-color="#008940" />
+						
+							<stop offset="0.45454545454545453" stop-color="#008941" />
+						
+							<stop offset="0.5454545454545454" stop-color="#008942" />
+						
+							<stop offset="0.6363636363636364" stop-color="#008c55" />
+						
+							<stop offset="0.7272727272727273" stop-color="#009986" />
+						
+							<stop offset="0.8181818181818182" stop-color="#00acc4" />
+						
+							<stop offset="0.9090909090909091" stop-color="#00b2e0" />
+						
+							<stop offset="1" stop-color="#00b3e4" />
+						
+					</linearGradient>
+				</defs>
+			</svg>

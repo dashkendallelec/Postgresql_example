@@ -1,0 +1,4 @@
+Name: LogixDriver
+Type: RAEtherNetIPDriver
+Children:
+- File: ProductionPLC/ProductionPLC.yaml

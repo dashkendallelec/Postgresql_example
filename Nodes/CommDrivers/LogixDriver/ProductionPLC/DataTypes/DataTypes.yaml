@@ -1,0 +1,49 @@
+Name: DataTypes
+Type: FolderType
+Children:
+- Class: DataType
+  Name: udtDataLog
+  Id: g=a306639fa444b7b442117848f746c7e1
+  Supertype: Structure
+  StructDefinition: 
+   {
+    "Name": "udtDataLog",
+    "DataType": {
+     "IdType": 2,
+     "Id": "a306639fa444b7b442117848f746c7e1",
+     "Namespace": 7
+    },
+    "Fields": [{
+      "Name": "Sine",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Cosine",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Trigger",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "Equipment_ID",
+      "DataType": {
+       "Id": 12
+      }
+     },{
+      "Name": "PLC_DateTime",
+      "DataType": {
+       "Id": 12
+      }
+     }]
+   }
+  DisplayName: {"LocaleId":"","Text":"udtDataLog"}
+  Children:
+  - Name: ns=0;Default Binary
+    Type: DataTypeEncodingType
+    ModellingRule: None
+    DisplayName: {"LocaleId":"","Text":"Default Binary"}
+    ReferenceType: HasEncoding

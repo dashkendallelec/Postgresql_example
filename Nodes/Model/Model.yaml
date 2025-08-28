@@ -1,0 +1,7 @@
+Name: Model
+Type: ModelCategoryFolder
+Children:
+- File: Types/Types.yaml
+- File: DBConfig/DBConfig.yaml
+- File: EquipmentConnections/EquipmentConnections.yaml
+- File: SystemSettings/SystemSettings.yaml

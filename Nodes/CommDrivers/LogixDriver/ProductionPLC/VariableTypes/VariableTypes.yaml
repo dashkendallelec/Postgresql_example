@@ -1,0 +1,49 @@
+Name: VariableTypes
+Type: FolderType
+Children:
+- Name: udtDataLog
+  Id: g=574965bcd0ab68de5295f7be21420b78
+  Supertype: TagStructure
+  DataType: udtDataLog
+  ValueRank: Any
+  Children:
+  - Name: Sine
+    Type: RAEtherNetIPTag
+    DataType: Float
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Sine"
+  - Name: Cosine
+    Type: RAEtherNetIPTag
+    DataType: Float
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Cosine"
+  - Name: Trigger
+    Type: RAEtherNetIPTag
+    DataType: Int32
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Trigger"
+  - Name: Equipment_ID
+    Type: RAEtherNetIPTag
+    DataType: String
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Equipment_ID"
+  - Name: PLC_DateTime
+    Type: RAEtherNetIPTag
+    DataType: String
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "PLC_DateTime"

@@ -1,0 +1,27 @@
+Name: DBConfig
+Type: FolderType
+Children:
+- Name: PostgreSQL_Config1
+  Id: g=059a5cd5d96b159e753f904b1bf0cec5
+  Type: PostgreSQL_Config
+  Children:
+  - Name: Hostname
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "localhost"
+  - Name: Port
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 5432
+  - Name: DatabaseName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "db_oee_local"
+  - Name: Username
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "optix_user"
+  - Name: Password
+    Type: BaseDataVariableType
+    DataType: Password
+    Value: "Da072168"

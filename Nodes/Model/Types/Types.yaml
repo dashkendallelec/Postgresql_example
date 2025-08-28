@@ -1,0 +1,147 @@
+Name: Types
+Type: FolderType
+Children:
+- Name: PostgreSQL_Config
+  Id: g=c7eb89d32f6a2e547c8259177140493b
+  Supertype: BaseObjectType
+  Children:
+  - Name: Hostname
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "localhost"
+  - Name: Port
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 5432
+  - Name: DatabaseName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "db_oee_local"
+  - Name: Username
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "optix_user"
+  - Name: Password
+    Type: BaseDataVariableType
+    DataType: Password
+    Value: "Da072168"
+- Name: InsertHrSummary_Config
+  Id: g=eae12fd614ee9ed7a228390d253c9933
+  Supertype: BaseObjectType
+  Children:
+  - Name: DB_Config
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Objects/PostgresqlTest/Model/Types/PostgreSQL_Config"
+  - Name: Call_HrSummarySP
+    Type: NetLogic
+    Children:
+    - Class: Method
+      Name: CallInsertSummary
+      Id: g=1d734b6d155861df4077858d5548191f
+  - Name: Sine
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Cosine
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Trigger
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Equipment_ID
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: PLC_DateTime
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: TriggerChanged
+    Type: VariableChangedEventDispatcher
+    Children:
+    - Name: VariableNodePath
+      Type: BaseVariableType
+      DataType: NodePath
+      Value: "../Trigger"
+    - Name: VariableValueChangedEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableValueChangedEvent"
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Call_HrSummarySP@NodeId"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "CallInsertSummary"
+      - Name: EventArguments
+        Type: VariableValueChangedEvent
+        Children:
+        - Name: VariableNodeId
+          Type: BaseVariableType
+          DataType: NodeId
+        - Name: NewValue
+          Type: BaseVariableType
+          DataType: BaseDataType
+        - Name: OldValue
+          Type: BaseVariableType
+          DataType: BaseDataType
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+  - Name: LastQuery
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: btnEnable
+    Type: BaseDataVariableType
+    DataType: Boolean

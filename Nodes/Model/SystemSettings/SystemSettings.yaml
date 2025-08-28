@@ -1,0 +1,8 @@
+Name: SystemSettings
+Id: g=48799fb0c8f6e746b00d5d4cd6b562b5
+Type: FolderType
+Children:
+- Name: FilterbuyBranding
+  Id: g=9fecab960280434480f3992fba1344a5
+  Type: BaseDataVariableType
+  DataType: Boolean
